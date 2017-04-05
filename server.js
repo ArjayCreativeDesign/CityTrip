@@ -9,7 +9,6 @@ var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 //MongoDB
-mongoose.connect('mongodb://citytrip:cityTripNovember#2016!@ds147487.mlab.com:47487/citytripunited');
 
 //Express
 var app = express();

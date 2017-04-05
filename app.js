@@ -28,7 +28,6 @@ cityTripApp.config(['$locationProvider',
              $stateProvider,
              $mdThemingProvider)
     {
-        SpotifyProvider.setClientId('c762825726274371a0110fd6eebb57f6');
         SpotifyProvider.setRedirectUri('http://localhost:3000/#!/citytripmusic');
         SpotifyProvider.setScope('user-read-private playlist-read-private');
 

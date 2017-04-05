@@ -13,7 +13,6 @@
                     url: "https://api.flickr.com/services/rest/",
                     params: {
                         method: 'flickr.people.getPublicPhotos',
-                        api_key: '9de6f3adb3ea72f407e1442ef431e20f',
                         format: 'json',
                         user_id: '146125122@N05',
                         nojsoncallback: 1
@@ -39,7 +38,6 @@
                     url: "https://api.flickr.com/services/rest/",
                     params: {
                         method: 'flickr.photosets.getPhotos',
-                        api_key: '9de6f3adb3ea72f407e1442ef431e20f',
                         format: 'json',
                         user_id: '146125122@N05',
                         photoset_id: photosetId,
@@ -66,7 +64,6 @@
                             params: {
                                 method: "flickr.photos.getInfo",
                                 photo_id: photoId,
-                                api_key: "9de6f3adb3ea72f407e1442ef431e20f",
                                 format: "json",
                                 nojsoncallback: 1
                             }
@@ -90,7 +87,6 @@
                 params: {
                     method: "flickr.photos.getExif",
                     photo_id: photoId,
-                    api_key: "9de6f3adb3ea72f407e1442ef431e20f",
                     format: "json",
                     nojsoncallback: 1
                 }

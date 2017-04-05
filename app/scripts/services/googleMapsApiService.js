@@ -10,7 +10,7 @@ cityTripApp.service('googleMapsService', function ($http, $q) {
         if (cache) {
             deferred.resolve(cache);
         }else{
-            $http.get("https://maps.googleapis.com/maps/api/js?key=AIzaSyAysZp2sSZxjg0o2ZtvKoYRqNm6WisQyWI&callback=initMap"
+            $http.get("https://onzin.com"
                 )
                 .then(function success(response) {
                         console.log(response.data);
