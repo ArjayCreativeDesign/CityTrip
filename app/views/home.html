@@ -1,0 +1,80 @@
+<div>
+<div id="logo">
+    <md-card class="wide-card">
+        <md-card-header>
+            <md-card-avatar>
+                <ctu-spinner ng-style="{transform: 'scale(.1)'}"></ctu-spinner>
+            </md-card-avatar>
+            <md-card-header-text>
+                <span class="md-title">City Trip</span>
+                <span class="md-subhead">United</span>
+            </md-card-header-text>
+        </md-card-header>
+        <md-card-content class="logo-card-content">
+            <div id="DateCountdown" data-date="2017-04-21 09:30:00"></div>
+            <p class="countdown-destination">countdown till sweden</p>
+        </md-card-content>
+    </md-card>
+</div>
+<div id="picture-slider">
+    <div class="slide active-slide">
+        <div class="image-container">
+            <img src="../app/assets/images/pictureSlider/overview.jpg" />
+            <p class="caption">Sao Paulo: Av. Eusébio Matoso near Shopping Eldorado</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="image-container">
+            <img src="../app/assets/images/pictureSlider/countryside.png" />
+            <p class="caption">Brazilian country side</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="image-container">
+            <img src="../app/assets/images/pictureSlider/2pacbiggie.png" />
+            <p class="caption">Graffiti art near Fradique Coutinho</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="image-container">
+            <img src="../app/assets/images/pictureSlider/doctors.png" />
+            <p class="caption">The docters of Brazil</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="image-container">
+            <img src="../app/assets/images/pictureSlider/estacioluz.png" />
+            <p class="caption">Estacio Luz</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="image-container">
+            <img src="../app/assets/images/pictureSlider/parqueluiz.png" />
+            <p class="caption">Parque Luz</p>
+        </div>
+    </div>
+
+    <!--slider navigatie, in het origineel zat dit buiten de picture-slider div, met position relative absolute-->
+    <!--zou ik een beter resultaat moeten kunnen bereiken-->
+</div>
+<div class="slider-nav">
+    <a href="#" class="arrow-prev" ng-click="previousSlide()"></a>
+    <ul class="slider-dots">
+        <li class="dot active-dot">&bull;</li>
+        <li class="dot">&bull;</li>
+        <li class="dot">&bull;</li>
+        <li class="dot">&bull;</li>
+        <li class="dot">&bull;</li>
+        <li class="dot">&bull;</li>
+        <li class="dot">&bull;</li>
+    </ul>
+    <a href="#" class="arrow-next" ng-click="nextSlide()"></a>
+</div>
+<ctu-variable-scroll-speeds></ctu-variable-scroll-speeds>
+    <ctu-quick-page-nav></ctu-quick-page-nav>
+</div>

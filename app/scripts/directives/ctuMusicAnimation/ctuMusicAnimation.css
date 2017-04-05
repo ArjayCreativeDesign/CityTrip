@@ -1,0 +1,104 @@
+#musicAnimationContainer {
+    width:60em;
+    height: 40em;
+    background: transparent;
+    border: 3px solid black;
+    margin:auto;
+    position: relative;
+}
+
+#innerBox {
+    width:50em;
+    height:38em;
+    background: black;
+    border: 5px solid black;
+    margin: -1% auto;
+    position: relative;
+}
+
+#innerOpaqueCircle {
+    width: 12em;
+    height: 12em;
+    border-radius: 50%;
+    margin: 23% 40%;
+    position: absolute;
+    outline: none;
+    color: hsla(0, 0%, 20%, 1);
+    text-shadow: hsla(0, 0%, 40%, .5) 0 -1px 0, hsla(0, 0%, 100%, .6) 0 2px 1px;
+    background-color: hsl(0, 0%, 90%);
+    box-shadow: inset hsla(0, 0%, 15%, 1) 0 0px 0px 4px, /* border */ inset hsla(0, 0%, 15%, .8) 0 -1px 5px 4px, /* soft SD */ inset hsla(0, 0%, 0%, .25) 0 -1px 0px 7px, /* bottom SD */ inset hsla(0, 0%, 100%, .7) 0 2px 1px 7px, /* top HL */ hsla(0, 0%, 0%, .15) 0 -5px 6px 4px, /* outer SD */ hsla(0, 0%, 100%, .5) 0 5px 6px 4px; /* outer HL */
+    transition: color .2s;
+    animation: beatdrum .7s linear;
+    animation-delay: 133s;
+    animation-iteration-count: 340;
+}
+
+#firstCircle {
+    width: 15em;
+    height:15em;
+    background: transparent;
+    border: 8px solid lawngreen;
+    border-radius: 50%;
+    position: absolute;
+    margin: 20.15% 37.1%;
+}
+
+#secondCircle {
+    width: 18em;
+    height:18em;
+    background: transparent;
+    border: 8px solid yellow;
+    border-radius: 50%;
+    position: absolute;
+    margin: 17.7% 34.5%;
+}
+
+#thirdCircle {
+    width: 21em;
+    height:21em;
+    background: transparent;
+    border: 8px solid red;
+    border-radius: 50%;
+    position: absolute;
+    margin: 15% 32%;
+}
+
+#fourthCircle {
+    width: 24em;
+    height:24em;
+    background: transparent;
+    border: 8px solid blue;
+    border-radius: 50%;
+    position: absolute;
+    margin:12.5% 29.5%;
+}
+
+#fifthCircle {
+    width: 27em;
+    height:27em;
+    background: transparent;
+    border: 8px solid purple;
+    border-radius: 50%;
+    position: absolute;
+    margin:10% 27%;
+}
+
+#sixCircle {
+    width: 30em;
+    height:30em;
+    background: transparent;
+    border: 8px solid deeppink;
+    border-radius: 50%;
+    position: absolute;
+    margin:7.5% 24.5%;
+}
+
+@keyframes beatdrum {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2)
+    }
+}

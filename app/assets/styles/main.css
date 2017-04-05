@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css?family=IM+Fell+English);
+
+body {
+    background: #CECECE;
+}
+
+#stage {
+    margin-top:60px;
+}
+
+#logo {
+    width:94%;
+    height: 325px;
+    margin:80px auto;
+    background: transparent;
+}
+
+#picture-slider {
+    width:80%;
+    height:300px;
+    background: transparent;
+    margin: 4% auto 8% auto;
+    position: relative;
+}
+
+.image-container > img	{
+    margin-top: 25px;
+    z-index: 5;
+    width:100%;
+}
+
+.slide	{
+    display:none;
+    position: absolute;
+    /*top: 0;*/
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.active-slide	{
+    display:block;
+}
+
+.slider-nav	{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.arrow-prev	{
+    margin-right: 45px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 9px;
+    height:20px;
+    width: 80px;
+    background-image: url("http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png");
+    border-radius: 25px;
+}
+
+.arrow-next	{
+    margin-right: 45px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 9px;
+    height:20px;
+    width: 80px;
+    border-radius: 25px;
+    background-image: url("http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png");
+}
+
+
+.slider-dots	{
+    list-style: none;
+    display: inline-block;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.slider-dots li	{
+    color: #bbbcbc;
+    display: inline;
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.slider-dots li.active-dot	{
+    color: #FF0000;
+}
+
+.caption {
+    transition: visibility 100ms;
+    text-align:center;
+    font-family: 'IM Fell English', serif;
+    font-size:2em;
+    margin-top: 0;
+}
+
+img > p	{
+    background-position: center;
+}
+
+.caption:hover	{
+    background: rgba(0,0,0,.6);
+    color: white;
+    width: inherit;
+    height: 50px;
+    visibility: visible;
+}
+
+#quickNavWrapper {
+    position: fixed;
+    bottom: 200px;
+    left: 1200px;
+    z-index: 1000000;
+}
+
+.md-card-image.header {
+    height: 250px;
+}
+
+#DateCountdown {
+    background: url("../../../app/assets/images/barcelona-top.jpg");
+}
+
+.logo-card-content {
+    height:300px;
+}
+
+.countdown-destination {
+    margin-top: -8px;
+}
+
+md-toolbar {
+    position: fixed;
+    z-index:10000;
+}

@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC');
+
+.ctuCityTrip {
+    font-family: 'Playfair Display SC', serif;
+}
+
+.cityTitle {
+    margin-left: 2%;
+    font-size: 24px;
+}
+
+.md-headline {
+    -webkit-text-stroke: 1px #4e5868;
+    text-transform: capitalize;
+    position: relative;
+    color: #000;
+}
+
+.card-media {
+    background: #F57C00;
+}
+
+.md-media-lg {
+    margin: auto;
+    width:100%;
+    height:100%;
+}
+
+.md-media-lg:hover {
+    animation: enlarge .8s linear forwards;
+}
+
+.md-media-lg:not(:hover) {
+    animation: shrink .8s linear forwards;
+}
+
+.cityTripImages {
+    width:100%;
+    height:100%;
+    border-radius: 4px;
+}
+
+.closeIcon {
+    position: absolute;
+    margin-top: -100px;
+    margin-left: -54px;
+}
+
+.filler {
+    background: transparent;
+}
+
+.description {
+    height: 364px;
+    border: 1px solid #4e5868;
+}
+
+.btnClose {
+    background: #eeeeee;
+}
+
+md-card {
+    box-shadow: 8px 7px 5px 0px rgba(0, 0, 0, 1), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.added-fig.main {
+    background-color: rgba(239,108,0, 0.9);
+    border-radius: 4px;
+}
+
+.added-fig.secondary {
+    background: #000000;
+    box-shadow: 8px 7px 5px 0px rgba(239, 108, 0, 1), 0px 1px 1px 0px rgba(239, 108, 0, 0.14), 0px 2px 1px -1px rgba(239, 108, 0, 0.12);
+    border-radius: 4px;
+}
+
+.added-fig {
+    background: #fff;
+    color: #000;
+    border:1px solid #000000;
+}
+
+#fullscreenPhoto {
+    margin-left:30%;
+    margin-top: 25%;
+    /*transform: scale(3.4, 3.4);*/
+    transform: scale(4, 4);
+}
+
+md-card.ng-hide-add {
+    animation: disappear 1s ease-out;
+}
+
+md-card.ng-hide-remove {
+    animation: appear 1s ease-in-out;
+}
+
+#p1 {
+    z-index: 10;
+}
+
+#description {
+    z-index: 1;
+    transform: rotate(-45deg) skewY(-4deg) translateX(75px);
+    width:270px;
+    height:270px;
+    margin-left:25px;
+}
+
+.descriptionHL {
+    transform: rotate(47deg);
+    font-size: 11px;
+    margin-right:93px;
+    margin-left: 15px;
+}
+
+.headLineStyle {
+    font-size: 12px;
+    margin-left: 108px;
+    margin-top: -40px;
+}
+
+md-card-content > .descriptionHL {
+    font-size: 16px;
+}
+
+.descriptionfonttitle {
+    font-size: 14px;
+}
+
+tr:focus {
+    outline: none;
+    border: 0;
+}
+
+.md-media-xl:focus {
+    outline: none;
+    border: 0;
+}
+
+md-icon:focus {
+    outline: none;
+    border: 0;
+}
+
+#tripcontainer {
+    position: relative;
+}
+
+#quickNavWrapper {
+    position: fixed;
+    bottom: 20px;
+    left: 1200px;
+    z-index: 1000000;
+}
+
+@keyframes enlarge {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(1.08);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes appear {
+
+    0% {
+        transform:translateX(-800px);
+        opacity: 0;
+    }
+
+    25% {
+        transform: translateX(-600px);
+        opacity: .01;
+    }
+
+    50% {
+            transform: translateX(-400px);
+            opacity: .05;
+        }
+
+    75% {
+        transform: translateX(-200px);
+        opacity: .08;
+    }
+
+    80% {
+        opacity: .1;
+    }
+
+    90% {
+        opacity: .15;
+    }
+
+    95% {
+        opacity: .2;
+    }
+
+    96 % {
+        opacity: .21;
+    }
+
+    97% {
+        opacity: .22;
+    }
+
+    98% {
+        opacity: .23;
+    }
+
+    99% {
+        opacity: .25;
+    }
+
+    100 % {
+        transform: translateX(0px);
+        opacity:1;
+    }
+}
+
+
+@keyframes disappear {
+
+    0% {
+        transform:translateX(200px);
+        opacity: 1;
+    }
+
+    25% {
+        transform: translateX(400px);
+        opacity: .1;
+    }
+
+    50% {
+        transform: translateX(600px);
+        opacity: .05;
+    }
+
+    75% {
+        transform: translateX(800px);
+        opacity: .02;
+    }
+
+    100 % {
+        transform: translateX(1000px);
+        opacity:0;
+        /*margin-left: -800px;*/
+    }
+}

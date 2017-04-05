@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Pangolin');
+
+body {
+    background: #000000;
+    font-family: 'Pangolin', cursive;
+}
+
+#countryPickerCard {
+    margin:80px auto;
+    border-radius: 25px;
+}
+
+#searchACountry {
+    width: 80%;
+}
+
+#succesCard {
+    width:200px;
+    height:200px;
+    opacity: 0;
+    animation: fadeIn 2s linear;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+}
+
+#countryCard {
+    margin: 4em;
+    border-radius: 16px;
+}
+
+#photocard {
+    width:400px;
+    height:300px;
+    border-radius: 16px;
+}
+
+.nonCountrypickerCards md-card {
+    display: inline-flex;
+}
+
+md-content {
+    height: 250px;
+    background-color: transparent;
+}
+/*Styling the select2 box on the page*/
+.select2-results .select2-result-label:hover {
+    background: #AE1C28;
+}
+
+.select2-results .select2-highlighted {
+    background: #21468B;
+}
+
+.select2-drop {
+    background: #ffffff;
+}
+
+input:focus {
+    border: 1px solid rgb(254,204,0);
+}
+
+md-list-item {
+    line-height: 4em;
+    border: 1px solid #000000;
+}
+
+/*Styling the country information box per country*/
+#Sweden > md-list-item:nth-child(odd) {
+    background: #006aa7;
+}
+
+#Sweden > md-list-item:nth-child(even) {
+    background: rgb(254,204,0);
+}
+
+#Netherlands > md-list-item:nth-child(3n + 1) {
+    background: red;
+}
+
+#Netherlands > md-list-item:nth-child(3n + 2) {
+    background: #fff;
+}
+
+#Netherlands > md-list-item:nth-child(3n + 3) {
+    background: blue;
+}
+
+#Turkey > md-list-item:nth-child(odd) {
+    background: #FF0000;
+}
+
+#Turkey > md-list-item:nth-child(even) {
+    background: #ffffff;
+}
+
+#Denmark > md-list-item:nth-child(odd) {
+    background:  #C60C30;
+}
+
+#Denmark > md-list-item:nth-child(even) {
+    background:  #ffffff;
+}
+
+#Germany > md-list-item:nth-child(3n + 1) {
+    background: #000000;
+    color: #ffffff;
+}
+
+#Germany > md-list-item:nth-child(3n + 2) {
+    background: #ffff00;
+}
+
+#Germany > md-list-item:nth-child(3n + 3) {
+    background: #FF0000;
+}
+
+#United > md-list-item:nth-child(odd) {
+    background: #21468B;
+}
+
+/*End of styling the country information box per country*/
+
+/*Removing the focus on elements withs ng-click */
+.nofocus:focus {
+    outline: none;
+    border: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: .2;
+    }
+
+    20% {
+        opacity: .4;
+    }
+
+    30% {
+        opacity:.6;
+    }
+
+    40% {
+        opacity:.8;
+    }
+
+    50% {
+        opacity:1;
+    }
+
+    60% {
+        opacity: .8;
+    }
+
+    70% {
+        opacity: .6;
+    }
+
+    80% {
+        opacity: .4;
+    }
+
+    90% {
+        opacity:.2;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+#starContainer {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    margin: 3em auto;
+    animation: star 1.8s linear infinite;
+}
+
+#animation-container {
+    animation: hide 2s linear;
+    animation-delay: 5s;
+}
+
+#starPartOne, #starPartTwo, #starPartThree, #starPartFour, #starPartFive, #starPartSix {
+    margin: 42.14% 38.575%;
+    width: 92px;
+    height: 60px;
+    position: absolute;
+}
+
+#starPartOne {
+    border: 1px solid #ff0000;
+    transform: rotate(160deg) skew(50deg);
+}
+
+#starPartTwo {
+    border: 1px solid blue;
+    transform: rotate(70deg) skew(50deg);
+}
+
+#starPartThree {
+    border: 1px solid black;
+    transform: rotate(200deg) skew(50deg);
+}
+
+#starPartFour {
+    border: 1px solid purple;
+    transform: rotate(300deg) skew(50deg);
+}
+
+#starPartFive {
+    border: 1px solid deeppink;
+    transform: rotate(44deg) skew(50deg);
+}
+
+#starPartSix {
+    border:1px solid turquoise;
+    transform: rotate(97deg) skew(50deg);
+}
+
+body, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*background-color: #444;*/
+    color: #333;
+    font-family: Helvetica, sans-serif;
+}
+
+#book {
+    background: url("../../../../app/assets/images/book.png") center/cover no-repeat;
+    position: absolute;
+    width: 1160px;
+    height: 700px;
+    left: 7%;
+    top: 2%;
+    margin-top: 60px;
+}
+
+#pages section {
+    display: block;
+    width: 574px;
+    height: 672px;
+    position: absolute;
+    left: 586px;
+    top: 13px;
+    overflow: hidden;
+}
+#pages section>div:first-child {
+    background: transparent;
+    display: block;
+    width: 200px;
+    height: 250px;
+    margin-left: 35px;
+    font-size: 12px;
+}
+
+#pages section:nth-child(2)>div:first-child {
+    margin-top: 25px;
+}
+
+#pages section>div:nth-child(2) {
+    background: transparent;
+    display: block;
+    width: 200px;
+    height: 100px;
+    margin-left: 33px;
+    margin-top: -70px;
+    font-size: 12px;
+}
+
+#pages section>div:nth-child(3) {
+    background: transparent;
+    display: block;
+    width: 200px;
+    height: 250px;
+    margin-left: 290px;
+    font-size: 12px;
+}
+
+#pages section>div:nth-child(4) {
+    background: transparent;
+    display: block;
+    width: 500px;
+    height: 200px;
+    margin-left: 40px;
+    font-size: 12px;
+}
+
+#pages section:nth-child(1)>div:nth-child(3) {
+    margin-top: -130px;
+}
+
+#pages section:nth-child(1)>div:nth-child(4) {
+    margin-top: -55px;
+}
+
+#pages section>div:nth-child(4) img {
+    width:100%;
+    height:100%;
+}
+
+img {
+    border:6px solid #ffffff;
+}
+
+#pages section p,
+#pages section h2 {
+    padding: 3px 35px;
+    line-height: 1.4em;
+    text-align: justify;
+    font-family: 'Indie Flower', cursive;
+    font-size: 16px;
+}
+
+#pages section .header {
+    font-family: 'Indie Flower', cursive;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#pages section > div:nth-child(2) > p, #pages section > div:nth-child(4) > p, #pages section:nth-child(2) > div:nth-child(2) > p, #pages section:nth-child(3) > div > p  {
+    color: #707887;
+}
+
+#pages section > div:nth-child(2) > p, #pages section:nth-child(2) > div:nth-child(2) > p {
+    padding-top: 70px;
+}
+
+#pages section > div:nth-child(4) > p, #pages section:nth-child(3) > div > p {
+    margin-left: 140px;
+}
+
+#pages section h2{
+    margin: 15px 0 10px;
+}
+
+#pages section:nth-child(1):after, #pages section:nth-child(2):after, #pages section:nth-child(3):after, #pages section:nth-child(4):after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../../../../app/assets/images/pagefilp/papyrus.jpg") center / cover;
+    width: 100%;
+    height: 100%;
+    opacity : 1;
+    z-index: -1;
+}
+
+#pages section:nth-child(3) > div {
+    width:90%;
+    height:90%;
+}
+
+#pages section:nth-child(3) > div img {
+    width:100%;
+    height: 100%;
+}
+
+#pageflip-canvas {
+    position: absolute;
+    z-index: 100;
+}
+
+.tape {
+    width:40px;
+    height:20px;
+    background: #f7f4f9;
+}
+
+#first-picture-top-left {
+    transform: rotate(-45deg) translateX(-50px) translateY(30px);
+}
+
+#first-picture-bottom-left {
+    transform: rotate(45deg) translateX(145px) translateY(165px);
+}
+
+#first-picture-top-right {
+    transform: rotate(-135deg) translateX(-170px) translateY(150px);
+}
+
+#second-picture-top-right {
+    transform: rotate(45deg) translateX(200px) translateY(-120px);
+}
+
+#second-picture-bottom-left {
+    transform: rotate(45deg) translateX(145px) translateY(165px);
+}
+
+#second-picture-bottom-right {
+    transform: rotate(-45deg) translateX(25px) translateY(300px);
+}
+
+#third-picture-top-left {
+    transform: rotate(-45deg) translateX(-60px) translateY(40px);
+}
+
+#third-picture-top-right {
+    transform: rotate(45deg) translateX(380px) translateY(-305px);
+}
+
+#third-picture-bottom-left {
+    transform: rotate(45deg) translateX(160px) translateY(180px);
+}
+
+#third-picture-bottom-right {
+    transform: rotate(-45deg) translateX(190px) translateY(500px);
+}
+
+@keyframes star {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(36deg);
+    }
+
+    20% {
+        transform: rotate(72deg);
+    }
+
+    30% {
+        transform: rotate(108deg);
+    }
+
+    40%{
+        transform: rotate(144deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    60% {
+        transform: rotate(216deg);
+    }
+
+    70% {
+        transform: rotate(252deg);
+    }
+
+    80% {
+        transform: rotate(288deg);
+    }
+
+    90% {
+        transform: rotate(324deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes hide {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity:0;
+    }
+}

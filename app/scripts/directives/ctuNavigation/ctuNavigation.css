@@ -1,0 +1,8 @@
+.md-button {
+    color:#000!important;
+}
+
+md-icon:focus {
+    outline: none;
+    border: 0;
+}

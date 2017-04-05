@@ -1,0 +1,35 @@
+<div id="altcitytrip">
+    <h1>{{cityData.name}}</h1>
+    <div id="animationcontainer" ng-show="showAnimation" ng-hide="hideAnimation">
+        <div id="innercircle" ng-click="startHideAnimation()">
+        </div>
+        <div id="shieldone" ng-click="showPicture($index)">
+        </div>
+        <div id="shieldtwo" ng-click="showPicture($index)">
+        </div>
+        <div id="shieldthree" ng-click="showPicture($index)">
+        </div>
+        <div id="shieldfour" ng-click="showPicture()">
+        </div>
+        <div id="shieldfive" ng-click="showPicture()">
+        </div>
+        <div id="shieldsix" ng-click="showPicture()">
+        </div>
+        <div id="shieldseven" ng-click="showPicture()">
+        </div>
+        <div id="shieldeight" ng-click="showPicture()">
+        </div>
+        <div id="shieldnine" ng-click="showPicture()">
+        </div>
+    </div>
+<!-- Animation comes from a site where half of the picture seems to break -->
+    <div id="outerdiv" layout="row" ng-show="hideAnimation">
+        <div flex id="vaguePictureDiv">
+            <div id="flowingDiv">
+                <img layout="column" id="vaguePicture" ng-repeat="image in images track by $index" src="https://farm{{image.farm}}.staticflickr.com/{{image.server}}/{{image.id}}_{{image.secret}}_m.jpg) no-repeat center center">
+            </div>
+        </div>
+        <div flex id="whiteDiv">
+        </div>
+    </div>
+</div>

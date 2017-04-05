@@ -1,0 +1,72 @@
+<div id="page-container">
+    <div id="animation-container" ng-hide="delayedHideAnimation">
+        <div id="starContainer">
+                <div id="starPartOne">
+                </div>
+                <div id="starPartTwo">
+                </div>
+                <div id="starPartThree">
+                </div>
+                <div id="starPartFour">
+                </div>
+                <div id="starPartFive">
+                </div>
+                <div id="starPartSix">
+                </div>
+        </div>
+    </div>
+    <div id="book" ng-show="showBook">
+        <canvas id="pageflip-canvas"></canvas>
+        <div id="pages">
+            <section>
+                <div>
+                    <div class="tape" id="first-picture-top-left"></div>
+                    <div class="tape" id="first-picture-bottom-left"></div>
+                    <div class="tape" id="first-picture-top-right"></div>
+                    <img src="https://farm{{images[22].farm}}.staticflickr.com/{{images[22].server}}/{{images[22].id}}_{{images[22].secret}}_m.jpg" />
+                </div>
+                <div>
+                    <p class="header"><span>"</span>{{images[22].title}}<span>"</span></p>
+                    <!--<p><span>"</span>{{descriptions[1].photo.description._content}}<span>"</span></p>-->
+                </div>
+                <div>
+                    <div class="tape" id="second-picture-top-right"></div>
+                    <div class="tape" id="second-picture-bottom-left"></div>
+                    <div class="tape" id="second-picture-bottom-right"></div>
+                    <img src="https://farm{{images[24].farm}}.staticflickr.com/{{images[24].server}}/{{images[24].id}}_{{images[24].secret}}_m.jpg" />
+                </div>
+                <div>
+                    <div class="tape" id="third-picture-top-left"></div>
+                    <div class="tape" id="third-picture-top-right"></div>
+                    <div class="tape" id="third-picture-bottom-left"></div>
+                    <div class="tape" id="third-picture-bottom-right"></div>
+                    <img src="https://farm{{images[5].farm}}.staticflickr.com/{{images[5].server}}/{{images[5].id}}_{{images[5].secret}}_m.jpg" />
+                    <p class="header"><span>"</span>{{images[5].title}}<span>"</span></p>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <img src="https://farm{{images[15].farm}}.staticflickr.com/{{images[15].server}}/{{images[15].id}}_{{images[15].secret}}_m.jpg" />
+                </div>
+                <div>
+                    <p class="header"><span>"</span>{{images[15].title}}<span>"</span></p>
+                </div>
+                <div>
+                    <img src="https://farm{{images[18].farm}}.staticflickr.com/{{images[18].server}}/{{images[18].id}}_{{images[18].secret}}_m.jpg" />
+                </div>
+                <div>
+                    <img src="https://farm{{images[19].farm}}.staticflickr.com/{{images[19].server}}/{{images[19].id}}_{{images[19].secret}}_m.jpg" />
+                </div>
+            </section>
+            <section>
+                <div>
+                    <img src="https://farm{{images[31].farm}}.staticflickr.com/{{images[31].server}}/{{images[31].id}}_{{images[31].secret}}_m.jpg" />
+                    <p class="header"><span>"</span>{{images[31].title}}<span>"</span></p>
+                </div>
+            </section>
+            <section>
+                <div> <!-- Any type of contents here --> </div>
+            </section>
+        </div>
+    </div>
+</div>

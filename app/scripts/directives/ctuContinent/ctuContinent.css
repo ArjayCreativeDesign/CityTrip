@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Pangolin');
+
+svg [cc] {
+    opacity:0;
+    animation:fadeIn 3s ease-in forwards;
+    /*transition: fill cubic-bezier(0,.5,.75,1) .5s;*/
+}
+
+path:focus {
+    outline: none;
+    border: 0;
+}
+
+g:focus {
+    outline:none;
+    border: 0;
+}
+
+#infocard {
+    background: #000;
+    color: #fff;
+    font-family: 'Pangolin', cursive;
+}
+
+.infoCardButtons {
+    background: #FF0000;
+    margin: -11px 6px!important;
+    height: 0!important;
+    line-height: 10px!important;
+}
+
+.infoCardIcons {
+    width: 15px!important;;
+    height:15px!important;
+    min-height: 15px!important;
+    min-width: 15px!important;
+}
+
+.ng-hide {
+    animation: fadeOut 1s ease-in forwards;
+}
+
+.appearingContinent {
+    animation: fadeIn 2s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+
+    10% {
+        opacity:.1;
+    }
+
+    20% {
+        opacity: .2;
+    }
+
+    30% {
+        opacity: .3;
+    }
+
+    40% {
+        opacity: .4;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    60% {
+        opacity: .6;
+    }
+
+    70% {
+        opacity: .7;
+    }
+
+    80% {
+        opacity: .8;
+    }
+
+    90% {
+        opacity: .9;
+    }
+
+    100% {
+        opacity:1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    10% {
+        opacity: .9;
+    }
+
+    20% {
+        opacity: .8;
+    }
+
+    30% {
+        opacity: .7;
+    }
+
+    40% {
+        opacity: .6;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    60% {
+        opacity: .4;
+    }
+
+    70% {
+        opacity: .3;
+    }
+
+    80% {
+        opacity: .2;
+    }
+
+    90% {
+        opacity: .1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+p {
+    display: block;
+}

@@ -1,0 +1,42 @@
+#cityBackground {
+    width:70%;
+    height: 70%;
+}
+
+#gridTile {
+    margin-left: 10%;
+}
+
+md-grid-tile {
+    border:1px solid #000000;
+}
+
+#cityName {
+    float: left;
+}
+
+#cityPicture {
+    float: right;
+}
+
+md-grid-tile:focus {
+    outline: none;
+    border: 0;
+}
+
+md-content {
+    position: relative;
+}
+
+#quickNavWrapper {
+    position: fixed;
+    bottom: 20px;
+    left: 1200px;
+    z-index: 1000000;
+}
+
+#city-name {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Pangolin', cursive;
+}

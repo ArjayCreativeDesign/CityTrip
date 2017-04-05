@@ -1,0 +1,16 @@
+<div>
+    <div>
+        <md-content layout-padding="">
+            <md-grid-list md-cols-gt-md="12" md-cols="3" md-cols-md="8" md-row-height-gt-md="1:1" md-row-height="4:3" md-gutter-gt-md="16px" md-gutter-md="8px" md-gutter="4px">
+                <md-grid-tile ng-repeat="background in tileBackgrounds" ng-click="navigateTo($index, background)" ng-style="{'background': 'url(' + background.image + ') center / cover '}" md-colspan-gt-sm="{{background.colspan}}" md-rowspan-gt-sm="{{background.rowspan}}">
+                    <div layout = "row" id="cityName">
+                        <h5 id="city-name">{{background.name}}</h5>
+                    </div>
+                </md-grid-tile>
+            </md-grid-list>
+        </md-content>
+    </div>
+    <div>
+        <ctu-quick-page-nav></ctu-quick-page-nav>
+    </div>
+</div>

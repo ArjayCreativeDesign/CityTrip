@@ -1,0 +1,13 @@
+<div id="quickNavWrapper" data-layout="column">
+        <md-button class="md-icon-button navButton" scroll-position="scroll" id="quickNavUp" ng-if="scroll >= 300">
+            <md-icon md-font-set="material-icons" ng-click="navigateToTop()">vertical_align_top</md-icon>
+        </md-button>
+
+        <md-button class="md-icon-button navButton" scroll-position="scroll" id="quickNavMiddle" ng-if="scroll < 400">
+            <md-icon md-font-set="material-icons" ng-click="navigateToMiddle()">vertical_align_center</md-icon>
+        </md-button>
+
+        <md-button class="md-icon-button navButton" scroll-position="scroll" ng-if="scroll < 700" id="quickNavDown">
+            <md-icon md-font-set="material-icons" ng-click="navigateToBottom()">vertical_align_bottom</md-icon>
+        </md-button>
+</div>

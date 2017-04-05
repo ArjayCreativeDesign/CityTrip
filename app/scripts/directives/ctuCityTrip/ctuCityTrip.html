@@ -1,0 +1,174 @@
+<div id="wrapper">
+    <div id="tripcontainer">
+        <!--<h1 class="cityTitle">{{cityData.name}}</h1>-->
+        <table ng-hide="fullscreenEnabled">
+            <tbody>
+            <tr ng-repeat="image in images track by $index" ng-click="giveIndex($index)">
+                <td id="p1" class="p">
+                    <md-card class="added-fig main" md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch>
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline" ng-show="images.length > 0">{{image.title}}</span>
+                                <span class="md-subhead">Taken: {{descriptions.photo.dates.taken}}</span>
+                            </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content layout="row" layout-align="space-between">
+                            <div class="md-media-lg card-media">
+                                <img src="https://farm{{image.farm}}.staticflickr.com/{{image.server}}/{{image.id}}_{{image.secret}}_m.jpg" ng-click="showDescription($index)" class="cityTripImages">
+                                 <!--ng-style="{background: 'url(https://farm{{image.farm}}.staticflickr.com/{{image.server}}/{{image.id}}_{{image.secret}}_m.jpg) no-repeat center center '}" ng-click="showDescription($index)">-->
+                            </div>
+                            <md-card-actions layout="column">
+                                <md-button class="md-icon-button" aria-label="Favorite">
+                                    <md-icon md-svg-icon="../../../../app/assets/images/icons/favorite_outline.svg" ng-click="toggleFavorite()" ng-hide="thisIsMyFavorite"></md-icon>
+                                    <md-icon md-svg-icon="../../../../app/assets/images/icons/favorited.svg" ng-click="toggleFavorite()" ng-hide="thisIsNotMyFavorite"></md-icon>
+                                </md-button>
+                                <md-button class="md-icon-button" aria-label="Share">
+                                    <md-icon md-svg-icon="../../../../app/assets/images/icons/share.svg"></md-icon>
+                                </md-button>
+                            </md-card-actions>
+                        </md-card-content>
+                    </md-card>
+                </td>
+                <td id="d1" class="d">
+                    <md-card id="description" ng-hide="hideDescription" ng-init="$scope.descriptions">
+                        <md-card-title class="descriptionHL descriptionfonttitle">
+                            <md-card-title-text>
+                                <span class="md-headline headLineStyle" ng-show="images.length > 0">{{image.title}}
+                                    <span class="closeIcon">
+                                        <md-button class="md-icon-button btnClose" aria-label="Close Description Button">
+                                            <md-icon md-svg-src="app/assets/images/ic_close_black_24px.svg" ng-click="hideDescriptionCard($index)"></md-icon>
+                                        </md-button>
+                                    </span>
+                                </span>
+                            </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content layout="row" layout-align="space-between" class="descriptionHL">
+                            <p>{{descriptions.photo.description._content}}</p>
+                        </md-card-content>
+                    </md-card>
+                </td>
+                <td class="filler">
+                    <md-card class="added-fig secondary" md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch>
+                        <md-card-content layout="row" layout-align="space-between">
+                            <md-chips>
+                                <md-chip>Favorited: {{descriptions.photo.isfavorite}}</md-chip>
+                            </md-chips>
+                        </md-card-content>
+                    </md-card>
+                </td>
+            </tr>
+            <tr ng-repeat="image in imageSetTwo track by $index" ng-click="giveIndex($index)">
+                <td id="d2">
+                    <md-card ng-class="description"  ng-hide="hideDescription">
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline" ng-show="imageSetTwo.length > 0">{{image.title}}</span>
+                            </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content layout="row" layout-align="space-between">
+                            <p>
+                                Lorizzle dang dolor sizzle amizzle, consectetizzle funky fresh crackalackin.
+                            </p>
+
+                            <p>
+                                Da bomb dope. Aliquizzle sagittizzle boofron a mauris.
+                            </p>
+
+                            <p>
+                                Morbi shut the shizzle up. Suspendisse potenti.
+                            </p>
+                        </md-card-content>
+                    </md-card>
+                </td>
+                <td ng-class="filler">
+                    <md-card class="added-fig secondary" md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch>
+                        <md-card-content layout="row" layout-align="space-between">
+                            <md-chips>
+                                <md-chip>Favorited: {{descriptions.photo.isfavorite}}</md-chip>
+                            </md-chips>
+                        </md-card-content>
+                    </md-card>
+                </td>
+                <td id="p2" >
+                    <md-card class="added-fig main" md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch>
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline" ng-show="imageSetTwo.length > 0">{{image.title}}</span>
+                                <span class="md-subhead">Taken: {{descriptions.photo.dates.taken}}</span>
+                            </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content layout="row" layout-align="space-between">
+                            <div class="md-media-xl card-media" ng-style="{background: 'url(https://farm{{image.farm}}.staticflickr.com/{{image.server}}/{{image.id}}_{{image.secret}}_m.jpg) no-repeat center center '}"></div>
+                            <md-card-actions layout="column">
+                                <md-button class="md-icon-button" aria-label="Favorite">
+                                    <md-icon md-svg-icon="../../../../app/assets/images/icons/favorited.svg"></md-icon>
+                                </md-button>
+                                <md-button class="md-icon-button" aria-label="Share">
+                                    <md-icon md-svg-icon="../../../../app/assets/images/icons/share.svg"></md-icon>
+                                </md-button>
+                            </md-card-actions>
+                        </md-card-content>
+                    </md-card>
+                </td>
+            </tr>
+            <tr ng-repeat="image in imageSetThree track by $index" ng-click="giveIndex($index)">
+                <td ng-class="filler">
+                    <md-card class="added-fig secondary" md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch>
+                        <md-card-content layout="row" layout-align="space-between">
+                            <md-chips>
+                                <md-chip>Favorited: {{descriptions.photo.isfavorite}}</md-chip>
+                            </md-chips>
+                        </md-card-content>
+                    </md-card>
+                </td>
+                <td id="d3"  ng-hide="hideDescription">
+                    <md-card class="description">
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline" ng-show="imageSetThree.length > 0">{{image.title}}</span>
+                            </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content layout="row" layout-align="space-between">
+                            <p>
+                                Lorizzle dang dolor sizzle amizzle, consectetizzle funky fresh crackalackin.
+                            </p>
+
+                            <p>
+                                Da bomb dope. Aliquizzle sagittizzle boofron a mauris.
+                            </p>
+
+                            <p>
+                                Morbi shut the shizzle up. Suspendisse potenti.
+                            </p>
+                        </md-card-content>
+                    </md-card>
+                </td>
+                <td id="p3" >
+                    <md-card class="added-fig main" md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch>
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline" ng-show="imageSetThree.length > 0">{{image.title}}</span>
+                                <span class="md-subhead">Extra Large</span>
+                            </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content layout="row" layout-align="space-between">
+                            <div class="md-media-xl card-media" ng-style="{background: 'url(https://farm{{image.farm}}.staticflickr.com/{{image.server}}/{{image.id}}_{{image.secret}}_m.jpg) no-repeat center center '}"></div>
+                            <md-card-actions layout="column">
+                                <md-button class="md-icon-button" aria-label="Favorite">
+                                    <md-icon md-svg-icon="../../../../app/assets/images/icons/favorited.svg"></md-icon>
+                                </md-button>
+                                <md-button class="md-icon-button" aria-label="Share">
+                                    <md-icon md-svg-icon="../../../../app/assets/images/icons/share.svg"></md-icon>
+                                </md-button>
+                            </md-card-actions>
+                        </md-card-content>
+                    </md-card>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <img ng-show="fullscreenEnabled" ng-init="$scope.photo"
+             src='https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_m.jpg' id="fullscreenPhoto" />
+    </div>
+    <ctu-quick-page-nav></ctu-quick-page-nav>
+</div>

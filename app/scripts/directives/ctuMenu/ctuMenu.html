@@ -1,0 +1,11 @@
+<div data-layout="row" ng-show="showRightMenu">
+    <md-sidenav md-component-id="right" class="md-sidenav-right">
+        <span ng-click="closeMenu()"><img src="../../../../app/assets/images/icons/closeIcon.svg" id="closeMenuBtn"></span>
+        <md-list>
+            <md-list-item ng-click="NavigateTo(menuitem)" ng-repeat="menuitem in menuitems" id="menuListItems">
+                <img ng-src="{{menuitem.icon}}" id="menuIcon"/>
+                <span>{{menuitem.name}}</span>
+            </md-list-item>
+        </md-list>
+    </md-sidenav>
+</div>

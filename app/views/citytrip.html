@@ -1,0 +1,11 @@
+<div id="citytripContainer">
+    <ctu-city-page ng-hide="cityName" city-name="cityName">
+        <div ng-hide="isDoneLoading">
+            <ctu-spinner></ctu-spinner>
+        </div>
+    </ctu-city-page>
+    <ctu-city-trip-alternative ng-if="cityAlt">
+    </ctu-city-trip-alternative>
+    <ctu-star ng-if="cityStar" city-star="cityStar">
+    </ctu-star>
+</div>

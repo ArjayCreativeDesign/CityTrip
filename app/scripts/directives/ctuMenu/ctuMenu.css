@@ -1,0 +1,19 @@
+#closeMenuBtn {
+    width: 40px;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#menuListItems:first-of-type {
+    margin-top: 50px;
+}
+
+#menuIcon {
+    width:20px;
+    margin-right: 5px;
+}
+
+.md-sidenav-right {
+    top:60px;
+}

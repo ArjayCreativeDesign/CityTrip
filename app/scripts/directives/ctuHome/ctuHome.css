@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+#columnsArea {
+    height:1500px;
+    background: #CECECE;
+    position: absolute;
+}
+
+.scrolling-columns {
+    width:420px;
+    height: 300px;
+    margin:4px;
+}
+
+#newsColumn {
+    background: transparent;
+    height:150px;
+    padding: 4px;
+}
+
+#recentTrips {
+    background: transparent;
+    height:296px;
+    padding:6px;
+}
+
+#wishList {
+    background: transparent;
+    height:396px;
+    padding: 6px;
+}
+
+.stories {
+    border:3px solid #000000;
+}
+
+h1,h3, h6, p {
+    padding:2px;
+    font-family: 'Amatic SC', cursive;
+}
+
+.wishlist-picture {
+    width: 380px;
+    padding:10px;
+    margin-top: 10px;
+}
+
+.date, .title, .message {
+    margin-left: 10px;
+    font-family: 'Amatic SC', cursive;
+}
+
+p {
+    font-size: 26px;
+    color: grey;
+}

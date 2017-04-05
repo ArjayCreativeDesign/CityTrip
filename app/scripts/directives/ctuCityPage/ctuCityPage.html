@@ -1,0 +1,41 @@
+<div>
+    <md-card class="added-fig main" md-theme="{{ showDarkTheme ? 'dark-orange' : 'default' }}" md-theme-watch ng-repeat="image in images track by $index">
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline" ng-show="images.length > 0">{{image.title}}</span>
+                <span class="md-subhead">Taken: {{descriptions.photo.dates.taken}}</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content layout="row" layout-align="space-between">
+            <div class="md-media-lg card-media">
+                <img src="https://farm{{image.farm}}.staticflickr.com/{{image.server}}/{{image.id}}_{{image.secret}}_m.jpg" ng-click="showDescription($index)" class="cityTripImages">
+                <!--ng-style="{background: 'url(https://farm{{image.farm}}.staticflickr.com/{{image.server}}/{{image.id}}_{{image.secret}}_m.jpg) no-repeat center center '}" ng-click="showDescription($index)">-->
+            </div>
+            <md-card-actions layout="column">
+                <md-button class="md-icon-button" aria-label="Favorite">
+                    <md-icon md-svg-icon="../../../../app/assets/images/icons/favorite_outline.svg" ng-click="toggleFavorite()" ng-hide="thisIsMyFavorite"></md-icon>
+                    <md-icon md-svg-icon="../../../../app/assets/images/icons/favorited.svg" ng-click="toggleFavorite()" ng-hide="thisIsNotMyFavorite"></md-icon>
+                </md-button>
+                <md-button class="md-icon-button" aria-label="Share">
+                    <md-icon md-svg-icon="../../../../app/assets/images/icons/share.svg"></md-icon>
+                </md-button>
+                <md-button class="md-icon-button" aria-label="Share">
+                    <md-icon md-svg-icon="../../../../app/assets/images/icons/more_vert.svg" ng-click="toggleDescriptionCards(image, $index)"></md-icon>
+                </md-button>
+            </md-card-actions>
+        </md-card-content>
+        <div class="tooltip" ng-show="showToolTips && $index === clickedindex">
+            <p class="tooltiptxt">Views: {{descriptions.photo.views}}</p>
+            <p class="tooltiptxt">{{descriptions.photo.description._content}}</p>
+        </div>
+        <div class="tooltip-extra" ng-show="showToolTips && $index === clickedindex">
+            <p class="tooltip-extra-text">Camera: {{exifinfo.photo.camera}}</p>
+            <p class="tooltip-extra-text">{{exifinfo.photo.exif[1].label}}: {{exifinfo.photo.exif[1].raw._content}}</p>
+            <p class="tooltip-extra-text">{{exifinfo.photo.exif[3].label}}: {{exifinfo.photo.exif[3].raw._content}}</p>
+            <p class="tooltip-extra-text">{{exifinfo.photo.exif[5].label}}: {{exifinfo.photo.exif[5].raw._content}}</p>
+            <p class="tooltip-extra-text">{{exifinfo.photo.exif[9].label}}: {{exifinfo.photo.exif[9].raw._content}}</p>
+            <p class="tooltip-extra-text">{{exifinfo.photo.exif[18].label}}: {{exifinfo.photo.exif[18].raw._content}}</p>
+            <p class="tooltip-extra-text">{{exifinfo.photo.exif[25].label}}: {{exifinfo.photo.exif[25].raw._content}}</p>
+        </div>
+    </md-card>
+</div>

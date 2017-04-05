@@ -1,0 +1,34 @@
+<div id="wrapper">
+    <md-card flex-xs flex-gt-xs="75" layout="column" ng-show="gotPlaylists">
+        <md-card-content>
+            <md-button class="md-accent md-raised" ng-click="login()" id="loginBtn">Login</md-button>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+            <md-button class="md-accent md-raised" ng-click="playlist()" ng-show="getPlaylistBtn" id="getPlaylistBtn">Show all playlists</md-button>
+        </md-card-actions>
+    </md-card>
+
+    <md-card flex-xs flex-gt-xs="75" layout="row" ng-repeat="item in ctuPlaylists.items" ng-show="ctuPlaylists.items[$index].name==playlistDetails[$index].results[0].name">
+        <md-card-content>
+            <h3 id="playlistTitle">{{ctuPlaylists.items[$index].name}}</h3>
+            <div layout="row" id="row">
+                <img  id="playlistImage" src="{{ctuPlaylists.items[$index].images[1].url}}" />
+            </div>
+            <div layout="column" id="column">
+                <p  id="playlistDescription" ng-show="ctuPlaylists.items[$index].name==playlistDetails[$index].results[0].name"> {{playlistDetails[$index].results[0].description}}</p>
+                <p id="playlistLength">Total tracks: {{ctuPlaylists.items[$index].tracks.total}} </p>
+                <p id="playlistLengthInTime">Totale length: {{playlistDetails[$index].results[0].total_length}}</p>
+                <p id="country">{{playlistDetails[$index].results[0].country}}</p>
+                <p id="city">{{playlistDetails[$index].results[0].city}}</p>
+                <a id="citytriplink" href="{{playlistDetails[$index].results[0].url}}">Link to citytrip</a>
+            </div>
+        </md-card-content>
+        <md-card-actions layout="column" layout-align="end-center" id="cardActions">
+            <md-button class="md-primary md-raised" id="playOnBtn" ng-click="playOnSpotify($index)">
+                Play on:
+                <img src="../../../../app/assets/images/Spotify_Icon_RGB_Black.png" id="playOnSpotify" />
+                    <!--<a href="{{ctuPlaylists.items[$index].external_urls.spotify}}" target="_blank"></a>-->
+            </md-button>
+        </md-card-actions>
+    </md-card>
+</div>

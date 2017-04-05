@@ -1,0 +1,79 @@
+<div>
+<md-card flex-gt-xs="60" id="countryPickerCard">
+    <md-card-content>
+        <ui-select class="nofocus" ng-model="selected.value" theme="select2" id="searchACountry" ng-click="evaluateStatus()" ng-disabled="dialogIsOpen">
+            <ui-select-match>
+                <span ng-bind="$select.selected.name"></span>
+            </ui-select-match>
+            <ui-select-choices class="nofocus" repeat="item in (itemArray | filter: $select.search) track by item.id" ng-click="selectedCountry()">
+                <span ng-bind="item.name" id="selectBox"></span>
+            </ui-select-choices>
+        </ui-select>
+        </md-card-content>
+        <md-card-actions>
+        </md-card-actions>
+</md-card>
+
+<div class="nonCountrypickerCards">
+<md-card id="succesCard" ng-show="availableCountries">
+    <md-card-content>
+        <p>You found a possibility to checkout a citytrip in this country</p>
+        </md-card-content>
+    </md-card>
+
+    <md-card flex-gt-xs="60" id="countryCard" ng-show="availableCountries">
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">{{msg.name}}</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content class = "contentdemoBasicUsage">
+            <md-content flex="" layout-padding="">
+                <md-list id="{{msg.name}}">
+                    <md-list-item class="md-2-line" ng-repeat="item in information">
+                        Native name: {{item.nativeName}}
+                    </md-list-item>
+                    <md-list-item class="md-2-line" ng-repeat="item in information">
+                        Capital: {{item.capital}}
+                    </md-list-item>
+                    <md-list-item class="md-2-line" ng-repeat="item in information">
+                        Official name: {{item.altSpellings[2]}}
+                    </md-list-item>
+                    <md-list-item class="md-2-line" ng-repeat="item in information">
+                        Population size: {{item.population}}
+                    </md-list-item>
+                    <md-list-item class="md-2-line" ng-repeat="item in information">
+                        Calling code: {{item.callingCodes[0]}}
+                    </md-list-item>
+                    <md-list-item class="md-2-line" ng-repeat="item in information">
+                        Currencies: {{item.currencies[0]}}
+                    </md-list-item>
+                    <md-list-item class="md-2-line" ng-repeat="item in information">
+                        German name: {{item.translations.de}}
+                    </md-list-item>
+                    <md-list-item class="md-2-line" ng-repeat="item in information">
+                        Language: {{item.demonym}}
+                    </md-list-item>
+                    <md-list-item class="md-2-line" ng-repeat="item in information">
+                        Timezone: {{item.timezones[0]}}
+                    </md-list-item>
+                    <md-list-item class="md-2-line" ng-repeat="item in information">
+                        Region: {{item.region}}
+                    </md-list-item>
+                    <md-list-item class="md-2-line" ng-repeat="item in information">
+                        Subregion: {{item.subregion}}
+                    </md-list-item>
+                </md-list>
+            </md-content>
+        </md-card-content>
+    </md-card>
+
+    <md-card id="photocard" ng-show="availableCountries">
+        <md-card-content>
+            <p>Photocard</p>
+        </md-card-content>
+    </md-card>
+</div>
+    <!--Implement md-dialog here-->
+<ctu-donate-dialog ng-hide="nonAvailableCountries"></ctu-donate-dialog>
+</div>

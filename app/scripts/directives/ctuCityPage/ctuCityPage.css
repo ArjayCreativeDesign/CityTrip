@@ -1,0 +1,107 @@
+#citytripContainer {
+    background: #CECECE;
+}
+
+.added-fig.main {
+    background-color: rgba(239,108,0, 0.9);
+    border-radius: 4px;
+}
+
+.added-fig.secondary {
+    background: #000000;
+    box-shadow: 8px 7px 5px 0px rgba(239, 108, 0, 1), 0px 1px 1px 0px rgba(239, 108, 0, 0.14), 0px 2px 1px -1px rgba(239, 108, 0, 0.12);
+    border-radius: 4px;
+}
+
+.added-fig {
+    background: #fff;
+    color: #000;
+    border:1px solid #000000;
+    width:400px;
+    margin:30px auto;
+}
+
+.added-fig:nth-child(1) {
+    margin:80px auto 0 auto;
+}
+
+md-card {
+    box-shadow: 8px 7px 5px 0px rgba(0, 0, 0, 1), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.md-headline {
+    -webkit-text-stroke: 1px #4e5868;
+    text-transform: capitalize;
+    position: relative;
+    color: #000;
+}
+
+md-card-content {
+    min-height:100%;
+    width:100%;
+}
+
+.card-media {
+    background: #F57C00;
+}
+
+.md-media-lg {
+    margin: auto;
+}
+
+.cityTripImages {
+    border-radius: 4px;
+}
+
+.tooltip, .tooltip-extra {
+    position: relative; opacity: .5; color: #FFF;
+    /*display: none;*/
+    /*top: -100px; left: 0px;*/
+    width: 180px; padding: 10px;
+    border-radius: 25px; -webkit-border-radius: 25px;
+    background-color: rgb(0,0,0);
+    -webkit-box-shadow: 0px 0px 15px 2px rgba(255,255,255,.75);
+    box-shadow: 0px 0px 15px 2px rgba(255,255,255, .75);
+    -webkit-transition: .5s; transition: .5s;
+}
+
+.tooltip {
+    margin-left: -70%;
+    margin-top:-45%;
+    max-height: 200px;
+}
+
+.tooltip-extra {
+    width:240px;
+    max-height: 200px;
+    margin-left:115%;
+    margin-top: -30%;
+}
+
+.tooltiptxt, .tooltip-extra-text {
+    font-family: 'IM Fell English', serif;
+    font-size: 12px;
+    padding:1px;
+    opacity: 1;
+}
+
+.tooltip.ng-hide-remove{
+    transform: translateX(350px);
+    opacity: 1;
+}
+
+.tooltip-extra.ng-hide-remove {
+    transform: translateX(-200px);
+    opacity: 1;
+}
+
+@keyframes show {
+    from {
+        opacity:0;
+    }
+
+    to {
+        opacity:1;
+    }
+
+}

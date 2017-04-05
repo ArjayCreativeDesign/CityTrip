@@ -1,0 +1,33 @@
+<div id="columnsArea" layout="row">
+    <div id="newsColumn" layout="column" class="scrolling-columns" data-scroll-speed="4">
+        <h1>News</h1>
+        <div class="stories" ng-repeat="story in stories">
+            <h3 class="title">{{story.title}}</h3>
+            <p class="message">{{story.message}}</p>
+        </div>
+    </div>
+    <div id="recentTrips" layout="column" class="scrolling-columns" data-scroll-speed="2">
+        <h1>Recent Trips</h1>
+        <div class="stories" ng-repeat="trip in recenttrips">
+            <h3 class="title">{{trip.title}}</h3>
+            <h6 class="date">{{trip.date}}</h6>
+        </div>
+    </div>
+    <div id="wishList" layout="column" class="scrolling-columns" data-scroll-speed="4">
+        <h1>Wishlist</h1>
+        <div class="stories">
+            <img class="wishlist-picture" src="../../../../app/assets/images/wishlist/mountrushmore.jpg"/>
+            <div class="overlap-title">
+                <small class="date">T.B.A.</small>
+                <h1 class="title">Nevada, Arizona & Utah</h1>
+            </div>
+        </div>
+        <div class="stories">
+            <img class="wishlist-picture" src="../../../../app/assets/images/wishlist/sydney.jpeg"/>
+            <div class="overlap-title">
+                <small class="date">T.B.A.</small>
+                <h1 class="title">Australia & New Zealand</h1>
+            </div>
+        </div>
+    </div>
+</div>

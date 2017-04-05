@@ -1,0 +1,18 @@
+<div data-layout="column">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <md-button class="md-icon-button">
+                <md-icon md-font-set="material-icons" ng-click="navigateBack()" ng-show="backButton"> chevron_left</md-icon>
+            </md-button>
+            <span id="appTitle">{{ Page.title() }}</span>
+
+            <!-- fill up the space between left and right area -->
+            <span data-flex></span>
+
+            <md-button class="md-icon-button">
+                <md-icon md-font-set="material-icons" ng-click="openRightMenu()">flight_takeoff</md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <ctu-menu></ctu-menu>
+</div>

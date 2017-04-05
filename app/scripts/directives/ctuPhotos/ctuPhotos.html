@@ -1,0 +1,9 @@
+<div>
+    <div id="messages"></div>
+    <div id="images" class="app-container">
+        <md-card class="added-fig" ng-repeat="image in images">
+            <img ng-src="https://farm{{image.farm}}.staticflickr.com/{{image.server}}/{{image.id}}_{{image.secret}}_m.jpg" />
+            <h3 ng-show="images.length > 0"> {{image.title}} </h3>
+        </md-card>
+    </div>
+</div>
