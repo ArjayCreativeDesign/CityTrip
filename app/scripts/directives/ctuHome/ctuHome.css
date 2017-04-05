@@ -1,31 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 #columnsArea {
-    height:1500px;
     background: #CECECE;
     position: absolute;
 }
 
 .scrolling-columns {
-    width:420px;
-    height: 300px;
-    margin:4px;
+    width:30%;
+    margin:1.4%;
 }
 
 #newsColumn {
     background: transparent;
-    height:150px;
     padding: 4px;
 }
 
 #recentTrips {
     background: transparent;
-    height:296px;
     padding:6px;
 }
 
 #wishList {
     background: transparent;
-    height:396px;
     padding: 6px;
 }
 
