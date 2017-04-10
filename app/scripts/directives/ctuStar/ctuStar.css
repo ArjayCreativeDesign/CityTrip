@@ -64,8 +64,8 @@ body {
 #book {
     background: url("../../../../app/assets/images/book.png") center/cover no-repeat;
     position: absolute;
-    width: 1160px;
-    height: 700px;
+    width: 85%;
+    height: 90%;
     left: 7%;
     top: 2%;
     margin-top: 60px;
@@ -73,18 +73,16 @@ body {
 
 #pages section {
     display: block;
-    width: 574px;
-    height: 672px;
+    width: 50%;
+    height: 96.2%;
     position: absolute;
-    left: 586px;
-    top: 13px;
+    left: 50%;
+    top: 2%;
     overflow: hidden;
 }
 #pages section>div:first-child {
     background: transparent;
     display: block;
-    width: 200px;
-    height: 250px;
     margin-left: 35px;
     font-size: 12px;
 }
@@ -96,19 +94,15 @@ body {
 #pages section>div:nth-child(2) {
     background: transparent;
     display: block;
-    width: 200px;
-    height: 100px;
-    margin-left: 33px;
-    margin-top: -70px;
+    margin-left: 3%;
+    margin-top: -7%;
     font-size: 12px;
 }
 
 #pages section>div:nth-child(3) {
     background: transparent;
     display: block;
-    width: 200px;
-    height: 250px;
-    margin-left: 290px;
+    margin-left: 52%;
     font-size: 12px;
 }
 
@@ -121,12 +115,12 @@ body {
     font-size: 12px;
 }
 
-#pages section:nth-child(1)>div:nth-child(3) {
-    margin-top: -130px;
+#pages section:nth-child(2)>div:nth-child(4) {
+    margin-top: 7%;
 }
 
-#pages section:nth-child(1)>div:nth-child(4) {
-    margin-top: -55px;
+#pages section:nth-child(1)>div:nth-child(3) {
+    margin-top: -130px;
 }
 
 #pages section>div:nth-child(4) img {
@@ -185,11 +179,16 @@ img {
 #pages section:nth-child(3) > div {
     width:90%;
     height:90%;
+    margin:4%;
 }
 
 #pages section:nth-child(3) > div img {
     width:100%;
     height: 100%;
+}
+
+#pages section:nth-child(4) > div {
+    margin-top: 2%;
 }
 
 #pageflip-canvas {

@@ -30,14 +30,17 @@
                   },7000);
 
                     (function() {
+                        var viewportWidth = $(window).width(),
+                            viewportHeight = $(window).height();
+
 
                         // Dimensions of the whole book
-                        var BOOK_WIDTH = 1160;
-                        var BOOK_HEIGHT = 700;
+                        var BOOK_WIDTH = viewportWidth * .85;
+                        var BOOK_HEIGHT = viewportHeight * .9;
 
                         // Dimensions of one page in the book
-                        var PAGE_WIDTH = 574;
-                        var PAGE_HEIGHT = 672;
+                        var PAGE_WIDTH = BOOK_WIDTH * .5;
+                        var PAGE_HEIGHT = BOOK_HEIGHT * .962;
 
                         // Vertical spacing between the top edge of the book and the papers
                         var PAGE_Y = ( BOOK_HEIGHT - PAGE_HEIGHT ) / 2;
@@ -249,77 +252,95 @@
 
                     databaseService.getCity(id)
                         .then(function success(data) {
-                                var cityData = data;
-                                $scope.cityData = data;
-                                Page.setTitle(cityData.nickname);
-                                FetchPhotos(cityData.photoset_id);
-                            },
-                            function error(error) {
-                                console.log(error)
-                            });
+                            var cityData = data;
+                            $scope.cityData = data;
+                            Page.setTitle(cityData.nickname);
+                            FetchPhotos(cityData.photoset_id);
+                        },
+                        function error(error) {
+                            console.log(error)
+                        });
 
                     function FetchPhotos(photosetId) {
                         $scope.$emit("photoSetId", photosetId);
                         flickrService.getAlbums(photosetId)
                             .then(function success(data) {
-                                    var i;
-                                    $scope.images = data.photoset.photo;
-                                    console.log($scope.images);
-                                    photoId.push($scope.images[5].id, $scope.images[22].id, $scope.images[31].id);
-                                    getDescription(photoId);
+                                $scope.images = data.photoset.photo;
+                                console.log(data);
+                                var imagesLength;
 
-                                    // console.log(photoId);
-                                    // angular.forEach(photoId, function (photo) {
-                                    //     getDescription(photo);
-                                    // });
-                                },
-                                function (error) {
-                                    console.log(error);
-                                });
-                    }
+                                switch(data.photoset.title) {
+                                    case "Busan": {
+                                        imagesLength = 8;
+                                    }
+                                    break;
 
-                    function getDescription(photoId) {
-                        console.log(photoId);
-                        $scope.descriptions = [ ];
-                        var description = [ ];
-                        $scope.responseId = [];
-                        angular.forEach(photoId, function (photo) {
-                            flickrService.getDescriptions(photo)
-                                .then(function success(response) {
-                                        angular.forEach(response, function (text) {
-                                            switch (text.id) {
-                                                case "31144857571":
-                                                    description.push({
-                                                        "title": text.title._content
-                                                    });
-                                                    break;
+                                    default: {
+                                        imagesLength = "nothing to see here"
+                                    }
+                                }
+                                $scope.$broadcast("ctuStar.determineSections", imagesLength);
+                                // determineSectionLength(imagesLength);
+                                // photoId.push($scope.images[5].id, $scope.images[22].id, $scope.images[31].id);
+                                                        $scope.imagesLength = imagesLength;
 
-                                                case "30451714643":
-                                                    description.push({
-                                                        "title": text.description._content
-                                                    });
-                                                    break;
-
-                                                case "30451715583":
-                                                    description.push({
-                                                        "title": text.title._content
-                                                    });
-                                                    break;
-                                                default:
-                                                    console.log("No photo found");
-                                            }
-                                        });
-                                    },
-                                    function (error) {
-                                        console.log(error);
-                                    });
-                        })
-
+                            },
+                            function (error) {
+                                console.log(error);
+                            });
                     }
                 };
 
-                self.init();
+                // function determineSectionLength(imageslength) {
+                //     console.log(imageslength);
+                //     switch(imageslength) {
+                //         case "3": {
+                //             return $scope.section = {
+                //                 "section": "<section></section>"
+                //             };
+                //         }
+                //         case "6": {
+                //             return $scope.section = {
+                //                 "section": "<section></section><section></section>"
+                //             };
+                //         }
+                //         case "7": {
+                //             return $scope.section = {
+                //                 "section": "<section></section><section></section><section></section>"
+                //             }
+                //         }
+                //         case "8": {
+                //             return $scope.section = {
+                //                 "section": "<section></section><section></section><section></section>"
+                //             }
+                //         }
+                //         case "9": {
+                //             return $scope.section = {
+                //                 "section": "<section></section><section></section><section></section><section></section>"
+                //             }
+                //         }
+                //         case "12": {
+                //             return $scope.section = {
+                //                 "section": "<section></section><section></section><section></section><section></section><section></section>"
+                //             }
+                //         }
+                //         case "14": {
+                //             return $scope.section = {
+                //                 "section": "<section></section><section></section><section></section><section></section><section></section><section></section>"
+                //             }
+                //         }
+                //         default: {
+                //             return $scope.section = {
+                //                 "section": ""
+                //             }
+                //         }
+                //     }
+                //
+                //
+                // }
 
+
+                self.init();
 
                 return self;
             }

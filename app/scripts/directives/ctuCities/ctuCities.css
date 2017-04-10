@@ -31,7 +31,7 @@ md-content {
 #quickNavWrapper {
     position: fixed;
     bottom: 20px;
-    left: 1200px;
+    left: 90%;
     z-index: 1000000;
 }
 

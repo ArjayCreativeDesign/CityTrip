@@ -18,6 +18,7 @@
     <div id="book" ng-show="showBook">
         <canvas id="pageflip-canvas"></canvas>
         <div id="pages">
+            <!--<div ctu-repeating-sections></div>-->
             <section>
                 <div>
                     <div class="tape" id="first-picture-top-left"></div>
@@ -65,7 +66,11 @@
                 </div>
             </section>
             <section>
-                <div> <!-- Any type of contents here --> </div>
+                <div>
+                    <img src="https://farm{{images[26].farm}}.staticflickr.com/{{images[26].server}}/{{images[26].id}}_{{images[26].secret}}_m.jpg" />
+                    <p class="header"><span>"</span>{{images[26].title}}<span>"</span></p>
+                </div>
+
             </section>
         </div>
     </div>
